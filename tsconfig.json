@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+
+    "target": "es2017",                               
+    "lib": ["ES6"],                                     
+    "experimentalDecorators": true,                
+    "emitDecoratorMetadata": true,                 
+    "module": "commonjs",                             
+    "rootDir": "./src",    
+    "outDir": "./dist",                           
+    "typeRoots": ["./node_modules/@types","./src/@types", "./custom_typings"],                               
+    "resolveJsonModule": true,                     
+    "allowJs": true,                               
+    "esModuleInterop": true,                       
+    "forceConsistentCasingInFileNames": true,         
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@database/*": ["./src/database/*"]
+    }               
+  }
+}
