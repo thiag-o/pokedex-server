@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken'
+const jwt = require('jsonwebtoken')
 const middlewareValidateJWT = (req, res, next) => {
   const bearer = req.headers.authorization
   if (!bearer) {
