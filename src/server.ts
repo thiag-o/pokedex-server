@@ -13,4 +13,8 @@ app.get('/', (request, response) => {
 
 app.use(...routes)
 
-app.listen(process.env.PORT || 3333, () => console.log('SERVER START PORT 3333'))
+if (process.env.PORT) {
+  app.listen(process.env.PORT, () => console.log('SERVER START PORT ' + process.env.PORT))
+} else {
+  app.listen(3333, () => console.log('SERVER START PORT 3333'))
+}
