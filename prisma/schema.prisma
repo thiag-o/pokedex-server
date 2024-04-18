@@ -6,20 +6,16 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
-  
+  provider = "sqlite"
+  url      = "file:../database/dev.db"
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
-  email String  @unique
-  username String @unique
-  password String
-  name String
-  pokemon String?
+  email     String   @unique
+  username  String   @unique
+  password  String
+  name      String
+  pokemon   String?
 }
-
-//prisma migrate dev 
-// atualizar migrate
